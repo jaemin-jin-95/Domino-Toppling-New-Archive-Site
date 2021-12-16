@@ -1,0 +1,603 @@
+/************ Basic Resets ************/
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul,
+nav ol { list-style-type: none; }
+
+* { box-sizing: border-box; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a { text-decoration: none; }
+
+:root {
+  --alice-blue: #ebf8ff;
+  --bright-white: #ffffff;
+  --fancy-blue: #0000ff;
+  --firey-rose: #ff5964;
+  --normal-green: #00cc00;
+  --ordinary-red: #ff0000;
+  --regular-gold: #ffcc00;
+  --rich-black: #000000;
+  --tea-green: #c8d6af;
+  --tea-green-light: #f7ffea;
+}
+
+/************ Basic Typography *************/
+body {
+  color: var(--rich-black);
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--firey-rose);
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 0.5em;
+}
+
+h4 { margin-bottom: 0.5em; }
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 1em;
+}
+
+button {
+  background: var(--tea-green);
+  border: none;
+  border-radius: 15px;
+  color: var(--rich-black);
+  display: block;
+  font-weight: 600;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/************ Basic Page Sections *************/
+#page {
+  margin: auto;
+  max-width: 1500px;
+}
+
+section,
+footer { padding: 20px; }
+
+section section {
+  margin: 0;
+  padding: 0;
+}
+
+/************ Header Styles *************/
+header {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 101px;
+  left: 0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  margin: auto;
+  margin-bottom: 10px;
+  position: relative;
+  width: 140px;
+}
+
+header .logo:hover { cursor: pointer; }
+
+.logo h1 {
+  color: var(--firey-rose);
+  font-size: 24px;
+  left: 42px;
+  position: absolute;
+  top: 10px;
+}
+
+.logo img { width: 50px; }
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li a {
+  color: var(--alice-blue);
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+/************ Slider Styles **************/
+#slider { margin-bottom: 50px; }
+
+#slider .flexslider ul li > div {
+  height: 0;
+  padding-top: 46.7%;
+  position: relative;
+}
+
+#slider > .flexslider > ul > li > div { background-size: cover; }
+
+.slide1 { background-image: url("images/slider/domino-slider01-small.png"); }
+.slide2 { background-image: url("images/slider/domino-slider02-small.png"); }
+.slide3 { background-image: url("images/slider/domino-slider03-small.png"); }
+.slide4 { background-image: url("images/slider/domino-slider04-small.png"); }
+
+#slider .cta {
+  background: rgba(6, 25, 35, 0.5);
+  bottom: 0;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+#slider .cta h2 {
+  color: #fff;
+  font-size: 20px;
+}
+
+/************ TheDominoSwag Jin Brief Overview Styles *************/
+.intro h2 { font-size: 30px; }
+
+.intro p { font-size: 20px; }
+
+#overview { background: var(--regular-gold); }
+
+#overview section {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/************ Domino Series' Styles *************/
+#dominoseries {
+  background: var(--normal-green);
+  color: #fff;
+}
+
+#dominoseries h2 { color: #fff; }
+
+#tabs { margin: auto; }
+
+#tabs > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#tabs > ul > li > a {
+  background: var(--tea-green);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--rich-black);
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  padding: 0 15px;
+}
+
+#tabs > div {
+  background: var(--tea-green-light);
+  color: var(--rich-black);
+  padding: 15px;
+  transition: opacity 200ms linear;
+}
+
+#tabs .active {
+  background: var(--tea-green-light);
+  color: var(--rich-black);
+}
+#tabs .hidden { display: none; }
+#tabs .visible { display: block; }
+#tabs .visuallyhidden { opacity: 0; }
+
+#tabs div ul {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+#tabs div ul li { margin-bottom: 0.5em; }
+
+#tabs div article { margin-bottom: 20px; }
+
+#tabs div h3 {
+  color: var(--firey-rose);
+  text-align: center;
+}
+
+#tabs div h4 { text-align: center; }
+
+/* iframe container */
+.iframe-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/*                  */
+
+/************ Frequently Asked Questions' Styles **************/
+#questions { padding: 0; }
+
+#questions article { padding: 20px; }
+
+#questions article:first-of-type {
+  background: var(--ordinary-red);
+  color: #fff;
+}
+
+#questions h2 { color: #fff; }
+
+#questions blockquote {
+  font-size: 28px;
+  line-height: 1.3em;
+}
+
+#questions blockquote { text-indent: -0.4em; }
+
+#questions blockquote footer {
+  font-size: 0.6em;
+  margin: 0;
+}
+
+#questions blockquote footer span { color: var(--firey-rose); }
+
+#rotator img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*********** Domino Photo Gallery Styles ****************/
+#photos { padding: 0; }
+
+#photos article { padding: 20px; }
+
+#photos article:first-of-type { background: var(--fancy-blue); }
+
+#photos h2 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+div.gallery { border: 1px solid #ccc; }
+
+div.gallery:hover { border: 1px solid #777; }
+
+div.gallery img {
+  height: auto;
+  width: 100%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  float: left;
+  font-size: 12px;
+  margin: 6px 0;
+  padding: 0 6px;
+  width: 24.99999%;
+}
+
+/* Desktop Layout */
+@media only screen and (max-width: 1020px) {
+  .responsive {
+    font-size: 11px;
+    margin: 6px 0;
+    width: 33.33333%;
+  }
+}
+
+/* Tablet Layout */
+@media only screen and (max-width: 760px) {
+  .responsive {
+    font-size: 11px;
+    margin: 6px 0;
+    width: 49.99999%;
+  }
+}
+
+/* Mobile Layouts */
+@media only screen and (max-width: 500px) {
+  .responsive {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/************ Footer Styles *************/
+#page > footer {
+  background: var(--rich-black);
+  color: var(--firey-rose);
+  margin-bottom: 0;
+}
+
+footer .logo { margin-bottom: 20px; }
+
+footer .logo h1 { color: var(--firey-rose); }
+
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+footer article h2 {
+  color: var(--bright-white);
+  font-size: 20px;
+  text-align: center;
+}
+
+/*************** Flexslider Styles ***********/
+.flexslider {
+  margin: 0 20px;
+  border: none;
+  border-radius: 0;
+}
+
+/************ Tablet Size Styles *************/
+@media only screen and (min-width: 760px) {
+  /* Slider Styles */
+  #slider .cta {
+    right: 0;
+    width: 50%;
+  }
+
+  .slide1 { background-image: url("images/slider/domino-slider01-medium.png"); }
+  .slide2 { background-image: url("images/slider/domino-slider02-medium.png"); }
+  .slide3 { background-image: url("images/slider/domino-slider03-medium.png"); }
+  .slide4 { background-image: url("images/slider/domino-slider04-medium.png"); }
+
+  #overview { display: flex; }
+
+  /* Overview Styles */
+  #overview > article {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  #overview > section {
+    flex: 3;
+    padding-top: 3em;
+  }
+
+  /* Domino Series' Styles */
+  #dominoseries { display: flex; }
+
+  #dominoseries article:first-of-type {
+    flex: 2;
+    margin-right: 20px;
+  }
+  #dominoseries article:last-of-type { flex: 3; }
+
+  /* Frequently Asked Questions' Styles */
+  #questions { display: flex; }
+
+  #questions article:first-of-type { flex: 2; }
+  #questions article:last-of-type { flex: 5; }
+
+  #rotator { min-height: 350px; }
+
+  #rotator blockquote { display: none; }
+
+  /* Footer Styles */
+  #page > footer { display: flex; }
+
+  #page > footer .logo {
+    flex: 1;
+    margin: 0;
+  }
+
+  #page > footer nav {
+    flex: 1;
+    margin: 10px 20px 0 0;
+  }
+
+  #page > footer article {
+    flex: 2;
+    margin-top: 10px;
+  }
+}
+
+/************ Large Tablet Size Styles *************/
+@media only screen and (min-width: 1020px) {
+  /* Body, Header and Slider Styles */
+  body { padding: 0; }
+
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .logo {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  header nav { flex: 2; }
+
+  header nav ul {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  header nav ul li a { padding: 20px 10px; }
+
+  #slider .cta {
+    padding: 30px;
+    width: 33%;
+  }
+
+  /* Domino Series' Styles */
+  #dominoseries article:first-of-type { flex: 1; }
+  #dominoseries article:last-of-type { flex: 4; }
+
+  #dominoseries .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #dominoseries .container article {
+    flex: 1;
+    margin: 0;
+    padding: 0 10px 40px 10px;
+    position: relative;
+  }
+
+  #dominoseries .container article button {
+    bottom: 0;
+    position: absolute;
+  }
+
+  /* Question Styles */
+  #questions article:first-of-type { flex: 1; }
+  #questions article:last-of-type { flex: 4; }
+
+  #questions blockquote { font-size: 36px; }
+
+  /* Content Rotator */
+  #rotator { min-height: 550px; }
+}
+
+/************ Desktop Size Styles *************/
+@media only screen and (min-width: 1200px) {
+  /* Page Styles */
+  section { padding: 50px; }
+
+  #page > footer {
+    padding: 50px;
+    margin-bottom: 0;
+  }
+
+  /* Header Styles */
+  header .logo { margin-left: 50px; }
+
+  header nav ul { margin-right: 50px; }
+
+  header .logo h1 {
+    font-size: 36px;
+    left: 60px;
+    top: 12px;
+  }
+
+  header .logo img { width: 70px; }
+
+  /* Slider Styles */
+  #slider .cta {
+    padding: 50px;
+    width: 25%;
+  }
+
+  .slide1 { background-image: url("images/slider/domino-slider01-large.png"); }
+  .slide2 { background-image: url("images/slider/domino-slider02-large.png"); }
+  .slide3 { background-image: url("images/slider/domino-slider03-large.png"); }
+  .slide4 { background-image: url("images/slider/domino-slider04-large.png"); }
+
+  /* Overview Styles */
+  #overview > article {
+    flex: 1;
+    margin-right: 50px;
+  }
+
+  #overview > section {
+    flex: 2;
+    padding-top: 3em;
+  }
+
+  #overview > section {
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Domino Series' Styles */
+  #dominoseries > article:first-of-type { margin-right: 50px; }
+
+  #dominoseries .container article {
+    flex: 1;
+    padding: 0 20px 40px 20px;
+  }
+
+  /* Question Styles */
+  #questions article:first-of-type {
+    flex: 1;
+    padding: 50px;
+  }
+  #questions article:last-of-type { flex: 4; }
+
+  #questions blockquote {
+    font-size: 48px;
+    padding: 30px;
+  }
+
+  /* Footer Styles */
+  #page > footer nav { flex: 2; }
+
+  #page > footer nav ul { justify-content: flex-start; }
+
+  #page > footer nav ul li { margin-right: 20px; }
+
+  #page > footer article { padding: 0 20px; }
+}
+
+/************ Maximum Size Styles *************/
+@media only screen and (min-width: 1500px) {
+  header {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+  }
+}
