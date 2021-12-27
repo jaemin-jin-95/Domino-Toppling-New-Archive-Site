@@ -1,5 +1,5 @@
 # TheDominoSwag Jin New Archive Site
-> Before diving into my domino new archive site, here's [my old one](https://jaemin-jin-95.github.io/Domino-Toppling-Old-Archive-Site/) to compare.
+> Before diving into my domino new archive site, here's [my old source code](https://github.com/jaemin-jin-95/Domino-Toppling-Old-Archive-Site) to compare.
 
 ### Navigation Bar
 - Overview
